@@ -871,7 +871,6 @@ RCT_EXPORT_METHOD(paymentRequestWithOptionForm:(NSDictionary *)options
     [configuration setRequiredBillingAddressFields:requiredBillingAddressFields];
     [configuration setCompanyName:companyName];
     [configuration setPublishableKey:nextPublishableKey];
-    [configuration setAppleMerchantIdentifier: merchantId];
     
     OwnKeyProvider *keyProvide = [[OwnKeyProvider alloc] initWithData: ephermalCustomerData];
     STPCustomerContext *customerContext = [[STPCustomerContext alloc] initWithKeyProvider:keyProvide];

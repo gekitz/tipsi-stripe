@@ -211,7 +211,7 @@ public class StripeModule extends ReactContextBaseJavaModule {
             public void onCustomerRetrieved(@NonNull Customer customer) {
                 module.attachPaymentMethodsActivityResultListener(promise);
 
-                PaymentMethodsActivityStarter.Args args = new PaymentMethodsActivityStarter.Args.Builder().setShouldShowGooglePay(true).build();
+                PaymentMethodsActivityStarter.Args args = new PaymentMethodsActivityStarter.Args.Builder().build();
                 PaymentMethodsActivityStarter paymentStarterActivity = new PaymentMethodsActivityStarter(getCurrentActivity());
                 paymentStarterActivity.startForResult(args);
             }
