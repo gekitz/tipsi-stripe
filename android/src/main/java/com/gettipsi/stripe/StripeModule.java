@@ -144,6 +144,17 @@ public class StripeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void setStripeAccount(final String stripeAccount) {
+      ArgCheck.notEmptyString(mPublicKey);
+
+       if (stripeAccount != null) {
+         mStripe = new Stripe(getReactApplicationContext(), mPublicKey, stripeAccount);
+       } else {
+         mStripe = new Stripe(getReactApplicationContext(), mPublicKey);
+       }
+    }
+
+    @ReactMethod
     public void init(@NonNull ReadableMap options, @NonNull ReadableMap errorCodes) {
         ArgCheck.nonNull(options);
 
