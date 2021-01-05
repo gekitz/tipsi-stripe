@@ -139,6 +139,13 @@ RCT_ENUM_CONVERTER(STPPaymentMethodType,
                       @"card_present": @(STPPaymentMethodTypeCardPresent),
                       @"fpx": @(STPPaymentMethodTypeFPX),
                       @"sepa_debit": @(STPPaymentMethodTypeSEPADebit),
+                      @"ali_pay": @(STPPaymentMethodTypeAlipay),
+                      @"aubecs_debit": @(STPPaymentMethodTypeAUBECSDebit),
+                      @"bacs_debit": @(STPPaymentMethodTypeBacsDebit),
+                      @"giro_pay": @(STPPaymentMethodTypeGiropay),
+                      @"eps": @(STPPaymentMethodTypeEPS),
+                      @"przelewy_24": @(STPPaymentMethodTypePrzelewy24),
+                      @"ban_contact": @(STPPaymentMethodTypeBancontact),
                       @"unknown": @(STPPaymentMethodTypeUnknown),
                       }),
                    STPPaymentMethodTypeUnknown,
@@ -151,6 +158,13 @@ RCT_ENUM_CONVERTER(STPPaymentMethodType,
         case STPPaymentMethodTypeCardPresent: return @"card_present";
         case STPPaymentMethodTypeFPX: return @"fpx";
         case STPPaymentMethodTypeSEPADebit: return @"sepa_debit";
+        case STPPaymentMethodTypeAlipay: return @"ali_pay";
+        case STPPaymentMethodTypeAUBECSDebit: return @"aubecs_debit";
+        case STPPaymentMethodTypeBacsDebit: return @"bacs_debit";
+        case STPPaymentMethodTypeGiropay: return @"giro_pay";
+        case STPPaymentMethodTypeEPS: return @"eps";
+        case STPPaymentMethodTypePrzelewy24: return @"przelewy_24";
+        case STPPaymentMethodTypeBancontact: return @"ban_contact";
         case STPPaymentMethodTypeUnknown: return @"unknown";
     }
 }
